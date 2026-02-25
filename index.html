@@ -961,12 +961,21 @@
       .reveal {
         opacity: 0;
         transform: translateY(20px);
-        transition: opacity .55s ease, transform .55s ease;
+        transition:
+          opacity 0.55s ease,
+          transform 0.55s ease;
       }
-      .reveal.visible { opacity: 1; transform: translateY(0); }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
       /* Fallback: ensure elements are visible if JS doesn't run */
       @media (prefers-reduced-motion: reduce) {
-        .reveal { opacity: 1; transform: none; transition: none; }
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
       }
 
       /* ── RESPONSIVE ── */
@@ -1014,7 +1023,9 @@
         .hamburger {
           display: flex;
         }
-        position: relative;
+        nav {
+          position: relative;
+        }
         section {
           padding: 3.5rem 1.25rem;
         }
@@ -1075,7 +1086,8 @@
             <span class="hero-card-emoji">🐩</span>
             <h3>Hôm nay tại nhà bạn</h3>
             <p>
-              Bảo mẫu Minh đang chăm sóc Bơ — đánh lông, cho ăn và dọn góc ngủ.
+              Bảo mẫu Lạc Nghiên đang chăm sóc Teo — đánh lông, cho ăn và dọn
+              góc ngủ.
             </p>
             <div class="hero-card-stat">
               <div class="stat-item">
@@ -1221,40 +1233,40 @@
             </div>
           </div>
           <div class="how-visual reveal">
-            <div class="daily-log-header">📋 Nhật Ký Hôm Nay — Nhà Bé Bơ</div>
+            <div class="daily-log-header">📋 Nhật Ký Hôm Nay — Nhà Bé Teo</div>
             <div class="log-item">
               <div class="log-icon">🌅</div>
               <div class="log-time">08:00</div>
               <div class="log-text">
-                Bảo mẫu đến. Bơ đang ngủ ngon, đã cho ăn sáng đúng chế độ.
+                Bảo mẫu đến. Teo đang ngủ ngon, đã cho ăn sáng đúng chế độ.
               </div>
             </div>
             <div class="log-item">
               <div class="log-icon">🎾</div>
               <div class="log-time">08:45</div>
               <div class="log-text">
-                Dắt Bơ dạo công viên 30 phút. Bơ rất vui, đã gặp bạn mới!
+                Dắt Teo dạo công viên 30 phút. Teo rất vui, đã gặp bạn mới!
               </div>
             </div>
             <div class="log-item">
               <div class="log-icon">🍳</div>
               <div class="log-time">09:30</div>
               <div class="log-text">
-                Bơ đang ngủ. Đã nấu canh chua + cơm cho bữa tối của gia đình.
+                Teo đang ngủ. Đã nấu canh chua + cơm cho bữa tối của gia đình.
               </div>
             </div>
             <div class="log-item">
               <div class="log-icon">🧹</div>
               <div class="log-time">10:15</div>
               <div class="log-text">
-                Dọn góc ngủ của Bơ, hút bụi phòng khách và gấp quần áo giặt.
+                Dọn góc ngủ của Teo, hút bụi phòng khách và gấp quần áo giặt.
               </div>
             </div>
             <div class="log-item">
               <div class="log-icon">✅</div>
               <div class="log-time">11:00</div>
               <div class="log-text">
-                Kết thúc ca. Bơ khỏe mạnh, nhà gọn gàng. Hẹn gặp lại! 🐾
+                Kết thúc ca. Teo khỏe mạnh, nhà gọn gàng. Hẹn gặp lại! 🐾
               </div>
             </div>
           </div>
