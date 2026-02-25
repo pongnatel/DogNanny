@@ -1,0 +1,1489 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DogNanny Pro – Dịch Vụ Bảo Mẫu Thú Cưng Cao Cấp Tại Nhà</title>
+    <meta
+      name="description"
+      content="DogNanny Pro – Hơn cả một người giữ chó. Chúng tôi đến nhà bạn, chăm sóc cún cưng, nấu ăn và dọn dẹp. Đăng ký ngay hôm nay!"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ========================
+         COLOR PALETTE (Warm Neutrals)
+         --cream:    #fdf6e3
+         --light:    #fffdf5
+         --border:   #e6dbbf
+         --sand:     #faedcd
+         --caramel:  #d4a373
+         --brown:    #8c6b4f
+         --dark:     #5c4033
+         --hover:    #b08968
+         --deep:     #6b4c3e
+      ======================== */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --cream: #fdf6e3;
+        --light: #fffdf5;
+        --border: #e6dbbf;
+        --sand: #faedcd;
+        --caramel: #d4a373;
+        --brown: #8c6b4f;
+        --dark: #5c4033;
+        --hover: #b08968;
+        --deep: #6b4c3e;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Nunito", sans-serif;
+        background: var(--cream);
+        color: #3d2c24;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar {
+        width: 7px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--cream);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--caramel);
+        border-radius: 4px;
+      }
+
+      /* ── NAVBAR ── */
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(255, 253, 245, 0.85);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 0 2rem;
+      }
+      .nav-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 64px;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+      }
+      .logo-icon {
+        font-size: 2rem;
+      }
+      .logo-text {
+        font-size: 1.35rem;
+        font-weight: 900;
+        color: var(--dark);
+        letter-spacing: -0.5px;
+      }
+      .logo-text span {
+        color: var(--caramel);
+      }
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+      .nav-links a {
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.9rem;
+        color: var(--brown);
+        transition: color 0.2s;
+      }
+      .nav-links a:hover {
+        color: var(--caramel);
+      }
+      .nav-cta {
+        background: var(--caramel);
+        color: #fff;
+        border: none;
+        padding: 0.55rem 1.4rem;
+        border-radius: 50px;
+        font-family: inherit;
+        font-weight: 800;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition:
+          background 0.2s,
+          transform 0.15s;
+        text-decoration: none;
+      }
+      .nav-cta:hover {
+        background: var(--hover);
+        transform: translateY(-1px);
+      }
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+      }
+      .hamburger span {
+        display: block;
+        width: 24px;
+        height: 2.5px;
+        background: var(--dark);
+        border-radius: 2px;
+        transition: 0.3s;
+      }
+
+      /* ── HERO ── */
+      .hero {
+        position: relative;
+        min-height: 92vh;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        background: linear-gradient(
+          135deg,
+          #fff8ea 0%,
+          #fdf6e3 50%,
+          #faedcd 100%
+        );
+        padding: 5rem 2rem 4rem;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(212, 163, 115, 0.18) 0%,
+          transparent 70%
+        );
+        top: -100px;
+        right: -150px;
+        pointer-events: none;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(140, 107, 79, 0.1) 0%,
+          transparent 70%
+        );
+        bottom: -80px;
+        left: -100px;
+        pointer-events: none;
+      }
+      .hero-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+      }
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        background: var(--sand);
+        color: var(--brown);
+        padding: 0.35rem 1rem;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        border: 1px solid var(--border);
+      }
+      .hero h1 {
+        font-size: clamp(2.4rem, 5vw, 3.8rem);
+        font-weight: 900;
+        line-height: 1.1;
+        color: var(--dark);
+        margin-bottom: 1.25rem;
+        letter-spacing: -1px;
+      }
+      .hero h1 .highlight {
+        color: var(--caramel);
+        display: inline-block;
+        position: relative;
+      }
+      .hero h1 .highlight::after {
+        content: "";
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        background: rgba(212, 163, 115, 0.3);
+        border-radius: 4px;
+        z-index: -1;
+      }
+      .hero-desc {
+        font-size: 1.1rem;
+        color: #6b5548;
+        margin-bottom: 2rem;
+        max-width: 480px;
+        line-height: 1.75;
+      }
+      .hero-actions {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .btn-primary {
+        background: var(--dark);
+        color: #fff;
+        padding: 0.9rem 2rem;
+        border-radius: 12px;
+        font-family: inherit;
+        font-weight: 800;
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+        transition:
+          background 0.2s,
+          transform 0.15s,
+          box-shadow 0.2s;
+        box-shadow: 0 4px 20px rgba(92, 64, 51, 0.25);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .btn-primary:hover {
+        background: var(--deep);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 28px rgba(92, 64, 51, 0.3);
+      }
+      .btn-outline {
+        background: transparent;
+        color: var(--brown);
+        border: 2px solid var(--caramel);
+        padding: 0.9rem 2rem;
+        border-radius: 12px;
+        font-family: inherit;
+        font-weight: 800;
+        font-size: 1rem;
+        cursor: pointer;
+        transition:
+          background 0.2s,
+          transform 0.15s;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .btn-outline:hover {
+        background: var(--sand);
+        transform: translateY(-2px);
+      }
+
+      /* Hero Visual */
+      .hero-visual {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .hero-card {
+        background: #fff;
+        border-radius: 28px;
+        padding: 2.5rem;
+        box-shadow:
+          0 24px 64px rgba(140, 107, 79, 0.15),
+          0 4px 16px rgba(0, 0, 0, 0.06);
+        border: 1px solid var(--border);
+        width: 100%;
+        max-width: 380px;
+        position: relative;
+      }
+      .hero-card-emoji {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        display: block;
+      }
+      .hero-card h3 {
+        font-size: 1.2rem;
+        font-weight: 800;
+        color: var(--dark);
+        margin-bottom: 0.5rem;
+      }
+      .hero-card p {
+        font-size: 0.9rem;
+        color: #7a6355;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+      }
+      .hero-card-stat {
+        display: flex;
+        gap: 1rem;
+      }
+      .stat-item {
+        flex: 1;
+        background: var(--sand);
+        border-radius: 14px;
+        padding: 0.8rem;
+        text-align: center;
+        border: 1px solid var(--border);
+      }
+      .stat-num {
+        font-size: 1.5rem;
+        font-weight: 900;
+        color: var(--dark);
+        display: block;
+      }
+      .stat-lbl {
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: var(--brown);
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+      }
+      .hero-float-1 {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        background: var(--caramel);
+        color: #fff;
+        border-radius: 50px;
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+        font-weight: 800;
+        box-shadow: 0 4px 16px rgba(212, 163, 115, 0.4);
+        white-space: nowrap;
+        animation: floatY 3s ease-in-out infinite;
+      }
+      .hero-float-2 {
+        position: absolute;
+        bottom: -15px;
+        left: -15px;
+        background: #fff;
+        border: 2px solid var(--border);
+        border-radius: 50px;
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--brown);
+        animation: floatY 3.5s ease-in-out infinite reverse;
+      }
+      @keyframes floatY {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+
+      /* ── TRUST BAR ── */
+      .trust-bar {
+        background: var(--dark);
+        padding: 1.1rem 2rem;
+        overflow: hidden;
+      }
+      .trust-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+        flex-wrap: wrap;
+      }
+      .trust-item {
+        color: var(--sand);
+        font-size: 0.85rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        opacity: 0.9;
+      }
+      .trust-dot {
+        width: 5px;
+        height: 5px;
+        background: var(--caramel);
+        border-radius: 50%;
+      }
+
+      /* ── SECTION SHARED ── */
+      section {
+        padding: 5rem 2rem;
+      }
+      .section-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .section-tag {
+        display: inline-block;
+        background: var(--sand);
+        color: var(--brown);
+        padding: 0.25rem 0.85rem;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        border: 1px solid var(--border);
+      }
+      .section-title {
+        font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+        font-weight: 900;
+        color: var(--dark);
+        line-height: 1.15;
+        margin-bottom: 0.75rem;
+        letter-spacing: -0.5px;
+      }
+      .section-sub {
+        font-size: 1.05rem;
+        color: #7a6355;
+        max-width: 560px;
+        line-height: 1.7;
+      }
+      .section-header {
+        margin-bottom: 3.5rem;
+      }
+
+      /* ── FEATURES ── */
+      .features-bg {
+        background: #fff;
+      }
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+      .feature-card {
+        background: var(--light);
+        border: 1.5px solid var(--border);
+        border-radius: 20px;
+        padding: 2rem 1.75rem;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s,
+          border-color 0.2s;
+      }
+      .feature-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(140, 107, 79, 0.12);
+        border-color: var(--caramel);
+      }
+      .feature-icon {
+        width: 56px;
+        height: 56px;
+        background: var(--sand);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        margin-bottom: 1.25rem;
+        border: 1px solid var(--border);
+      }
+      .feature-card h3 {
+        font-size: 1.05rem;
+        font-weight: 800;
+        color: var(--dark);
+        margin-bottom: 0.6rem;
+      }
+      .feature-card p {
+        font-size: 0.9rem;
+        color: #7a6355;
+        line-height: 1.65;
+      }
+
+      /* ── HOW IT WORKS ── */
+      .how-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        align-items: center;
+      }
+      .steps {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .step {
+        display: flex;
+        gap: 1.25rem;
+        position: relative;
+        padding-bottom: 2rem;
+      }
+      .step:last-child {
+        padding-bottom: 0;
+      }
+      .step-line {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+      }
+      .step-num {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--caramel);
+        color: #fff;
+        font-weight: 900;
+        font-size: 0.95rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        box-shadow: 0 4px 12px rgba(212, 163, 115, 0.4);
+      }
+      .step-connector {
+        flex: 1;
+        width: 2px;
+        background: var(--border);
+        margin-top: 6px;
+        min-height: 30px;
+      }
+      .step:last-child .step-connector {
+        display: none;
+      }
+      .step-body {
+        padding-top: 6px;
+      }
+      .step-body h4 {
+        font-size: 1rem;
+        font-weight: 800;
+        color: var(--dark);
+        margin-bottom: 0.35rem;
+      }
+      .step-body p {
+        font-size: 0.9rem;
+        color: #7a6355;
+        line-height: 1.6;
+      }
+      .how-visual {
+        background: #fff;
+        border-radius: 28px;
+        padding: 2.5rem;
+        border: 1.5px solid var(--border);
+        box-shadow: 0 12px 40px rgba(140, 107, 79, 0.1);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .daily-log-header {
+        font-size: 0.7rem;
+        font-weight: 800;
+        color: var(--brown);
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+      }
+      .log-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 0.75rem;
+        background: var(--sand);
+        border-radius: 12px;
+        border: 1px solid var(--border);
+      }
+      .log-time {
+        font-size: 0.75rem;
+        color: var(--brown);
+        font-weight: 700;
+        min-width: 55px;
+        padding-top: 2px;
+      }
+      .log-text {
+        font-size: 0.85rem;
+        color: var(--dark);
+        font-weight: 600;
+        line-height: 1.5;
+      }
+      .log-icon {
+        font-size: 1.1rem;
+        flex-shrink: 0;
+      }
+
+      /* ── PRICING ── */
+      .pricing-bg {
+        background: var(--sand);
+      }
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        align-items: start;
+      }
+      .pricing-card {
+        background: #fff;
+        border-radius: 24px;
+        padding: 2.25rem 2rem;
+        border: 1.5px solid var(--border);
+        position: relative;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .pricing-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 40px rgba(140, 107, 79, 0.15);
+      }
+      .pricing-card.featured {
+        border-color: var(--caramel);
+        background: var(--dark);
+        color: var(--sand);
+      }
+      .pricing-badge {
+        position: absolute;
+        top: -13px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--caramel);
+        color: #fff;
+        padding: 0.25rem 0.9rem;
+        border-radius: 50px;
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+      .pricing-name {
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        color: var(--caramel);
+        margin-bottom: 0.5rem;
+      }
+      .pricing-price {
+        font-size: 2.4rem;
+        font-weight: 900;
+        color: var(--dark);
+        line-height: 1;
+        margin-bottom: 0.25rem;
+      }
+      .pricing-card.featured .pricing-price {
+        color: #fff;
+      }
+      .pricing-unit {
+        font-size: 0.85rem;
+        color: #9a7a6a;
+        margin-bottom: 1.25rem;
+      }
+      .pricing-card.featured .pricing-unit {
+        color: rgba(250, 237, 205, 0.7);
+      }
+      .pricing-desc {
+        font-size: 0.9rem;
+        color: #7a6355;
+        margin-bottom: 1.5rem;
+        line-height: 1.55;
+      }
+      .pricing-card.featured .pricing-desc {
+        color: var(--sand);
+        opacity: 0.85;
+      }
+      .pricing-features {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        margin-bottom: 1.75rem;
+      }
+      .pricing-features li {
+        font-size: 0.88rem;
+        color: #5a4035;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+      .pricing-card.featured .pricing-features li {
+        color: var(--sand);
+      }
+      .pricing-features li::before {
+        content: "✓";
+        color: var(--caramel);
+        font-weight: 900;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+      .pricing-btn {
+        width: 100%;
+        padding: 0.85rem;
+        border-radius: 12px;
+        font-family: inherit;
+        font-weight: 800;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: 0.2s;
+        border: 2px solid var(--caramel);
+        background: transparent;
+        color: var(--caramel);
+      }
+      .pricing-btn:hover {
+        background: var(--sand);
+      }
+      .pricing-card.featured .pricing-btn {
+        background: var(--caramel);
+        color: #fff;
+        border-color: var(--caramel);
+      }
+      .pricing-card.featured .pricing-btn:hover {
+        background: var(--hover);
+      }
+
+      /* ── TESTIMONIALS ── */
+      .testimonials-bg {
+        background: #fff;
+      }
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+      .testi-card {
+        background: var(--light);
+        border: 1.5px solid var(--border);
+        border-radius: 20px;
+        padding: 1.75rem;
+        transition: transform 0.2s;
+      }
+      .testi-card:hover {
+        transform: translateY(-3px);
+      }
+      .testi-stars {
+        color: var(--caramel);
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        letter-spacing: 2px;
+      }
+      .testi-text {
+        font-size: 0.92rem;
+        color: #5a4035;
+        line-height: 1.7;
+        margin-bottom: 1.25rem;
+        font-style: italic;
+      }
+      .testi-author {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+      .testi-avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: var(--sand);
+        border: 2px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        flex-shrink: 0;
+      }
+      .testi-name {
+        font-weight: 800;
+        font-size: 0.9rem;
+        color: var(--dark);
+      }
+      .testi-role {
+        font-size: 0.78rem;
+        color: var(--brown);
+      }
+
+      /* ── CTA SECTION ── */
+      .cta-section {
+        background: linear-gradient(135deg, var(--dark) 0%, #3d2014 100%);
+        padding: 5rem 2rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .cta-section::before {
+        content: "";
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(212, 163, 115, 0.15) 0%,
+          transparent 70%
+        );
+        top: -100px;
+        right: -100px;
+        pointer-events: none;
+      }
+      .cta-inner {
+        max-width: 680px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+      }
+      .cta-inner h2 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 900;
+        color: #fff;
+        margin-bottom: 1rem;
+        line-height: 1.15;
+        letter-spacing: -0.5px;
+      }
+      .cta-inner p {
+        font-size: 1.05rem;
+        color: rgba(250, 237, 205, 0.8);
+        margin-bottom: 2.5rem;
+        line-height: 1.7;
+      }
+      .cta-form {
+        display: flex;
+        gap: 0.75rem;
+        max-width: 480px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .cta-form input {
+        flex: 1;
+        min-width: 220px;
+        padding: 0.9rem 1.25rem;
+        border-radius: 12px;
+        border: 1.5px solid rgba(212, 163, 115, 0.4);
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+        font-family: inherit;
+        font-size: 0.95rem;
+        outline: none;
+        transition: border-color 0.2s;
+      }
+      .cta-form input::placeholder {
+        color: rgba(250, 237, 205, 0.5);
+      }
+      .cta-form input:focus {
+        border-color: var(--caramel);
+      }
+      .cta-form button {
+        background: var(--caramel);
+        color: #fff;
+        border: none;
+        padding: 0.9rem 1.75rem;
+        border-radius: 12px;
+        font-family: inherit;
+        font-weight: 800;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition:
+          background 0.2s,
+          transform 0.15s;
+        white-space: nowrap;
+      }
+      .cta-form button:hover {
+        background: var(--hover);
+        transform: translateY(-2px);
+      }
+      .cta-note {
+        font-size: 0.78rem;
+        color: rgba(250, 237, 205, 0.5);
+        margin-top: 1rem;
+      }
+
+      /* ── FOOTER ── */
+      footer {
+        background: #2a1a10;
+        color: rgba(250, 237, 205, 0.6);
+        padding: 2.5rem 2rem;
+        text-align: center;
+      }
+      .footer-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      .footer-logo {
+        font-size: 1.1rem;
+        font-weight: 900;
+        color: var(--caramel);
+      }
+      .footer-links {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .footer-links a {
+        color: rgba(250, 237, 205, 0.5);
+        text-decoration: none;
+        font-size: 0.82rem;
+        font-weight: 600;
+        transition: color 0.2s;
+      }
+      .footer-links a:hover {
+        color: var(--caramel);
+      }
+      .footer-copy {
+        font-size: 0.78rem;
+      }
+
+      /* ── ANIMATIONS ── */
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity .55s ease, transform .55s ease;
+      }
+      .reveal.visible { opacity: 1; transform: translateY(0); }
+      /* Fallback: ensure elements are visible if JS doesn't run */
+      @media (prefers-reduced-motion: reduce) {
+        .reveal { opacity: 1; transform: none; transition: none; }
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 900px) {
+        .hero-inner {
+          grid-template-columns: 1fr;
+          text-align: center;
+          gap: 3rem;
+        }
+        .hero-desc {
+          margin: 0 auto 2rem;
+        }
+        .hero-actions {
+          justify-content: center;
+        }
+        .hero-float-1 {
+          top: -10px;
+          right: -5px;
+        }
+        .hero-float-2 {
+          bottom: -10px;
+          left: -5px;
+        }
+        .how-inner {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 600px) {
+        .nav-links {
+          display: none;
+        }
+        .nav-links.open {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 64px;
+          left: 0;
+          width: 100%;
+          background: var(--light);
+          padding: 1rem 2rem;
+          border-bottom: 1px solid var(--border);
+          gap: 1rem;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+        .hamburger {
+          display: flex;
+        }
+        position: relative;
+        section {
+          padding: 3.5rem 1.25rem;
+        }
+        .hero {
+          padding: 4rem 1.25rem 3rem;
+        }
+        .cta-section {
+          padding: 3.5rem 1.25rem;
+        }
+        .trust-inner {
+          gap: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <div class="nav-inner">
+        <a class="logo" href="#hero">
+          <span class="logo-icon">🐾</span>
+          <span class="logo-text">DogNanny<span>Pro</span></span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#features">Dịch Vụ</a></li>
+          <li><a href="#how">Quy Trình</a></li>
+          <li><a href="#pricing">Bảng Giá</a></li>
+          <li><a href="#testimonials">Đánh Giá</a></li>
+        </ul>
+        <a href="#cta" class="nav-cta">Đăng Ký Ngay</a>
+        <div class="hamburger" id="hamburger" onclick="toggleNav()">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge">✨ Dịch Vụ Mới Ra Mắt</div>
+          <h1>
+            Người Bảo Mẫu <span class="highlight">Hoàn Hảo</span> Cho Cún Cưng
+            Của Bạn
+          </h1>
+          <p class="hero-desc">
+            Chúng tôi đến tận nhà, chơi với cún, nấu ăn và dọn dẹp — tất cả
+            trong một ca dịch vụ. Bạn đi làm yên tâm, về nhà thấy mọi thứ đều
+            ổn.
+          </p>
+          <div class="hero-actions">
+            <a href="#pricing" class="btn-primary">🐶 Xem Bảng Giá</a>
+            <a href="#how" class="btn-outline">Tìm Hiểu Thêm →</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <span class="hero-card-emoji">🐩</span>
+            <h3>Hôm nay tại nhà bạn</h3>
+            <p>
+              Bảo mẫu Minh đang chăm sóc Bơ — đánh lông, cho ăn và dọn góc ngủ.
+            </p>
+            <div class="hero-card-stat">
+              <div class="stat-item">
+                <span class="stat-num">4.9⭐</span>
+                <span class="stat-lbl">Đánh giá</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">200+</span>
+                <span class="stat-lbl">Khách hàng</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">98%</span>
+                <span class="stat-lbl">Hài lòng</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-float-1">✅ Sắp có lịch trống!</div>
+          <div class="hero-float-2">🔔 Nhận báo cáo qua App</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <div class="trust-bar">
+      <div class="trust-inner">
+        <div class="trust-item">✅ Bảo mẫu được xác minh lý lịch</div>
+        <div class="trust-dot"></div>
+        <div class="trust-item">📱 Cập nhật ảnh/video theo giờ</div>
+        <div class="trust-dot"></div>
+        <div class="trust-item">🏠 Phục vụ tại nhà bạn</div>
+        <div class="trust-dot"></div>
+        <div class="trust-item">🔒 Bảo hiểm trách nhiệm đầy đủ</div>
+        <div class="trust-dot"></div>
+        <div class="trust-item">⭐ 4.9/5 từ 200+ khách hàng</div>
+      </div>
+    </div>
+
+    <!-- FEATURES -->
+    <section id="features" class="features-bg">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <div class="section-tag">Dịch Vụ</div>
+          <h2 class="section-title">
+            Gói 4-trong-1 duy nhất<br />trên thị trường
+          </h2>
+          <p class="section-sub">
+            Kết hợp chuyên nghiệp giữa chăm sóc thú cưng và quản gia nhẹ trong
+            cùng một ca làm việc.
+          </p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card reveal">
+            <div class="feature-icon">🩺</div>
+            <h3>Chăm Sóc & Vệ Sinh</h3>
+            <p>
+              Cho ăn đúng chế độ, chải lông, vệ sinh tai mắt, kiểm tra ve rận và
+              ghi nhật ký sức khỏe gửi bạn qua App.
+            </p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon">🍳</div>
+            <h3>Việc Nhà & Nấu Nướng</h3>
+            <p>
+              Trong khi cún ngủ trưa, chúng tôi nấu bữa tối, giặt quần áo và dọn
+              dẹp nhẹ nhàng — nhà sạch khi bạn về.
+            </p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon">🎾</div>
+            <h3>Vui Chơi & Vận Động</h3>
+            <p>
+              Dắt chó đi dạo công viên, chơi trò chơi trí tuệ, tương tác và gửi
+              ảnh/video cập nhật theo giờ cho bạn.
+            </p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon">🎓</div>
+            <h3>Huấn Luyện Cơ Bản</h3>
+            <p>
+              Ôn luyện lệnh vâng lời, sửa thói quen xấu như cắn đồ hay sủa bậy —
+              kết hợp ngay trong ca trông nom.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how">
+      <div class="section-inner">
+        <div class="how-inner">
+          <div>
+            <div class="section-header reveal">
+              <div class="section-tag">Quy Trình</div>
+              <h2 class="section-title">
+                Dễ dàng đặt lịch,<br />yên tâm đi làm
+              </h2>
+              <p class="section-sub">
+                Chỉ 3 bước đơn giản, cún cưng của bạn được chăm sóc bởi người
+                bảo mẫu đã được kiểm duyệt kỹ lưỡng.
+              </p>
+            </div>
+            <div class="steps reveal">
+              <div class="step">
+                <div class="step-line">
+                  <div class="step-num">1</div>
+                  <div class="step-connector"></div>
+                </div>
+                <div class="step-body">
+                  <h4>Đặt lịch qua App hoặc Zalo</h4>
+                  <p>
+                    Chọn ngày, giờ, dịch vụ mong muốn và đặc điểm cún cưng của
+                    bạn.
+                  </p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-line">
+                  <div class="step-num">2</div>
+                  <div class="step-connector"></div>
+                </div>
+                <div class="step-body">
+                  <h4>Bảo mẫu đến đúng giờ</h4>
+                  <p>
+                    Chúng tôi xác nhận lịch, gửi thông tin và đến nhà bạn đúng
+                    giờ. Có mã cửa riêng nếu bạn không ở nhà.
+                  </p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-line">
+                  <div class="step-num">3</div>
+                  <div class="step-connector"></div>
+                </div>
+                <div class="step-body">
+                  <h4>Nhận báo cáo & Thanh toán</h4>
+                  <p>
+                    Cuối ca nhận ảnh, video và nhật ký chăm sóc chi tiết. Thanh
+                    toán online đơn giản qua App.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="how-visual reveal">
+            <div class="daily-log-header">📋 Nhật Ký Hôm Nay — Nhà Bé Bơ</div>
+            <div class="log-item">
+              <div class="log-icon">🌅</div>
+              <div class="log-time">08:00</div>
+              <div class="log-text">
+                Bảo mẫu đến. Bơ đang ngủ ngon, đã cho ăn sáng đúng chế độ.
+              </div>
+            </div>
+            <div class="log-item">
+              <div class="log-icon">🎾</div>
+              <div class="log-time">08:45</div>
+              <div class="log-text">
+                Dắt Bơ dạo công viên 30 phút. Bơ rất vui, đã gặp bạn mới!
+              </div>
+            </div>
+            <div class="log-item">
+              <div class="log-icon">🍳</div>
+              <div class="log-time">09:30</div>
+              <div class="log-text">
+                Bơ đang ngủ. Đã nấu canh chua + cơm cho bữa tối của gia đình.
+              </div>
+            </div>
+            <div class="log-item">
+              <div class="log-icon">🧹</div>
+              <div class="log-time">10:15</div>
+              <div class="log-text">
+                Dọn góc ngủ của Bơ, hút bụi phòng khách và gấp quần áo giặt.
+              </div>
+            </div>
+            <div class="log-item">
+              <div class="log-icon">✅</div>
+              <div class="log-time">11:00</div>
+              <div class="log-text">
+                Kết thúc ca. Bơ khỏe mạnh, nhà gọn gàng. Hẹn gặp lại! 🐾
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="pricing-bg">
+      <div class="section-inner">
+        <div class="section-header reveal" style="text-align: center">
+          <div class="section-tag">Bảng Giá</div>
+          <h2 class="section-title">Minh bạch, không phí ẩn</h2>
+          <p class="section-sub" style="margin: 0 auto">
+            Chọn gói phù hợp với nhu cầu của bạn. Tất cả gói đều bao gồm bảo
+            hiểm và báo cáo ca làm việc.
+          </p>
+        </div>
+        <div class="pricing-grid reveal">
+          <div class="pricing-card">
+            <div class="pricing-name">Cơ Bản</div>
+            <div class="pricing-price">150k</div>
+            <div class="pricing-unit">/ giờ</div>
+            <div class="pricing-desc">
+              Chăm sóc cơ bản cho cún cưng. Phù hợp khi bạn vắng nhà vài tiếng.
+            </div>
+            <ul class="pricing-features">
+              <li>Cho ăn & uống đúng giờ</li>
+              <li>Chơi đùa tại nhà</li>
+              <li>Vệ sinh góc ở của cún</li>
+              <li>Ảnh cập nhật qua Zalo</li>
+            </ul>
+            <button
+              class="pricing-btn"
+              onclick="
+                document
+                  .getElementById('cta')
+                  .scrollIntoView({ behavior: 'smooth' })
+              "
+            >
+              Đăng Ký Gói Này
+            </button>
+          </div>
+          <div class="pricing-card featured">
+            <div class="pricing-badge">🏆 Phổ Biến Nhất</div>
+            <div class="pricing-name">Tiêu Chuẩn</div>
+            <div class="pricing-price">250k</div>
+            <div class="pricing-unit">/ giờ</div>
+            <div class="pricing-desc">
+              Trọn gói chăm sóc cún + hỗ trợ việc nhà nhẹ. Lựa chọn của 70%
+              khách hàng.
+            </div>
+            <ul class="pricing-features">
+              <li>Tất cả trong gói Cơ Bản</li>
+              <li>Dắt dạo công viên 30 phút</li>
+              <li>Nấu 1 món ăn theo thực đơn</li>
+              <li>Giặt & gấp quần áo</li>
+              <li>Video cập nhật + Nhật ký chi tiết</li>
+            </ul>
+            <button
+              class="pricing-btn"
+              onclick="
+                document
+                  .getElementById('cta')
+                  .scrollIntoView({ behavior: 'smooth' })
+              "
+            >
+              Đăng Ký Gói Này
+            </button>
+          </div>
+          <div class="pricing-card">
+            <div class="pricing-name">Cao Cấp</div>
+            <div class="pricing-price">350k</div>
+            <div class="pricing-unit">/ giờ</div>
+            <div class="pricing-desc">
+              Dịch vụ toàn diện nhất, bao gồm huấn luyện cơ bản và dọn dẹp sâu.
+            </div>
+            <ul class="pricing-features">
+              <li>Tất cả trong gói Tiêu Chuẩn</li>
+              <li>Huấn luyện lệnh cơ bản</li>
+              <li>Dọn dẹp toàn bộ phòng khách</li>
+              <li>Tưới cây & nhận bưu phẩm</li>
+              <li>Tư vấn dinh dưỡng hàng tháng</li>
+            </ul>
+            <button
+              class="pricing-btn"
+              onclick="
+                document
+                  .getElementById('cta')
+                  .scrollIntoView({ behavior: 'smooth' })
+              "
+            >
+              Đăng Ký Gói Này
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="testimonials-bg">
+      <div class="section-inner">
+        <div class="section-header reveal" style="text-align: center">
+          <div class="section-tag">Đánh Giá</div>
+          <h2 class="section-title">Khách hàng nói gì về chúng tôi</h2>
+          <p class="section-sub" style="margin: 0 auto">
+            200+ gia đình đã tin tưởng DogNanny Pro chăm sóc cún cưng của họ.
+          </p>
+        </div>
+        <div class="testimonials-grid reveal">
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">
+              "Tôi đi công tác 2 ngày mà tâm trí hoàn toàn thoải mái vì Bảo mẫu
+              Linh gửi ảnh Toto mỗi tiếng. Về nhà thấy cả nồi canh nấu sẵn, xúc
+              động lắm!"
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">👩</div>
+              <div>
+                <div class="testi-name">Chị Ngọc Anh</div>
+                <div class="testi-role">Giám đốc Marketing · Hà Nội</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">
+              "Con Mochi nhà mình rất dễ bị stress khi ra ngoài. DogNanny Pro
+              đến tại nhà nên Mochi vẫn thoải mái trong môi trường quen thuộc.
+              Đây là dịch vụ mình tìm kiếm bấy lâu."
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">👨</div>
+              <div>
+                <div class="testi-name">Anh Tuấn Kiệt</div>
+                <div class="testi-role">Kỹ sư phần mềm · TP.HCM</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">
+              "Ban đầu hơi ngại vì để người lạ vào nhà, nhưng được xem lý lịch
+              và giấy tờ đầy đủ nên rất yên tâm. Bảo mẫu còn dạy Kẹo ngồi đúng
+              chỗ, điều trước đây mình chưa làm được!"
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">👩</div>
+              <div>
+                <div class="testi-name">Chị Phương Thảo</div>
+                <div class="testi-role">Bác sĩ · Đà Nẵng</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="cta-section">
+      <div class="cta-inner">
+        <h2>Sẵn Sàng Giao Cún Cưng Cho Chúng Tôi?</h2>
+        <p>
+          Đăng ký ngay hôm nay và nhận buổi tư vấn + ca đầu tiên miễn phí 30
+          phút. Số lượng có hạn mỗi tuần.
+        </p>
+        <div class="cta-form">
+          <input
+            type="email"
+            id="emailInput"
+            placeholder="Nhập email của bạn..."
+          />
+          <button onclick="handleCta()">Nhận Ưu Đãi 🐾</button>
+        </div>
+        <p class="cta-note">Không spam. Có thể huỷ bất cứ lúc nào.</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-logo">🐾 DogNanny Pro</div>
+        <div class="footer-links">
+          <a href="#features">Dịch Vụ</a>
+          <a href="#how">Quy Trình</a>
+          <a href="#pricing">Bảng Giá</a>
+          <a href="#testimonials">Đánh Giá</a>
+          <a href="#cta">Liên Hệ</a>
+        </div>
+        <p class="footer-copy">
+          © 2026 DogNanny Pro. Bảo lưu mọi quyền. Làm tại Việt Nam 🇻🇳
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Hamburger nav
+      function toggleNav() {
+        document.getElementById("navLinks").classList.toggle("open");
+      }
+
+      // CTA Handler
+      function handleCta() {
+        const email = document.getElementById("emailInput").value;
+        if (!email || !email.includes("@")) {
+          alert("Vui lòng nhập email hợp lệ!");
+          return;
+        }
+        alert(`🎉 Cảm ơn bạn! Chúng tôi sẽ liên hệ qua ${email} sớm nhất.`);
+        document.getElementById("emailInput").value = "";
+      }
+
+      // Scroll reveal
+      const revealElements = document.querySelectorAll(".reveal");
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                entry.target.classList.add("visible");
+              }, i * 80);
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+      revealElements.forEach((el) => revealObserver.observe(el));
+    </script>
+  </body>
+</html>
